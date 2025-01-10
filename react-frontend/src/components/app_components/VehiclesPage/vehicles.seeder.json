@@ -1,0 +1,82 @@
+[
+    {
+        "customerId": 1,
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2018,
+        "licensePlate": "ABC123",
+        "vin": "1HGCM82633A004352"
+    },
+    {
+        "customerId": 2,
+        "make": "Honda",
+        "model": "Accord",
+        "year": 2019,
+        "licensePlate": "XYZ789",
+        "vin": "1HGFA16586L000000"
+    },
+    {
+        "customerId": 3,
+        "make": "Ford",
+        "model": "F-150",
+        "year": 2020,
+        "licensePlate": "F150XLT",
+        "vin": "1FTRX18L9XKA40341"
+    },
+    {
+        "customerId": 4,
+        "make": "Chevrolet",
+        "model": "Malibu",
+        "year": 2017,
+        "licensePlate": "CHEV555",
+        "vin": "1G1ZT54845F000000"
+    },
+    {
+        "customerId": 5,
+        "make": "Nissan",
+        "model": "Altima",
+        "year": 2021,
+        "licensePlate": "NISSAN789",
+        "vin": "1N4AL11D75C000000"
+    },
+    {
+        "customerId": 6,
+        "make": "BMW",
+        "model": "328i",
+        "year": 2016,
+        "licensePlate": "BMW123",
+        "vin": "WBA3A5C52DF000000"
+    },
+    {
+        "customerId": 7,
+        "make": "Audi",
+        "model": "A4",
+        "year": 2018,
+        "licensePlate": "AUDI555",
+        "vin": "WAUEFAFL5GN000000"
+    },
+    {
+        "customerId": 8,
+        "make": "Mercedes",
+        "model": "C-Class",
+        "year": 2019,
+        "licensePlate": "MERC123",
+        "vin": "WDDGF8BB5BR000000"
+    },
+    {
+        "customerId": 9,
+        "make": "Tesla",
+        "model": "Model 3",
+        "year": 2020,
+        "licensePlate": "TESLA789",
+        "vin": "5YJ3E1EA7JF000000"
+    },
+    {
+        "customerId": 10,
+        "make": "Subaru",
+        "model": "Outback",
+        "year": 2021,
+        "licensePlate": "SUB123",
+        "vin": "4S4BSAAC0J3333333"
+    }
+]

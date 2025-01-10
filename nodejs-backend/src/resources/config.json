@@ -1,0 +1,4313 @@
+{
+  "projectName": "car-service-center",
+  "description": null,
+  "auth": "jwt",
+  "database": {
+    "pathToLogo": {
+      "s": "/assets/applications_logos/mongodb-s.png",
+      "l": "/assets/applications_logos/mongodb.png"
+    },
+    "appName": "mongodb-database",
+    "disabled": false,
+    "type": "database",
+    "name": "mongodb",
+    "label": "MongoDB"
+  },
+  "stack": [
+    {
+      "appName": "nodejs-backend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/nodejs-s.png",
+        "l": "/assets/applications_logos/nodejs.png"
+      },
+      "type": "backend",
+      "name": "nodejs",
+      "label": "Node.js Express Feathers.js"
+    },
+    {
+      "appName": "react-frontend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/react-s.png",
+        "l": "/assets/applications_logos/react.png"
+      },
+      "type": "frontend",
+      "name": "react",
+      "label": "React JavaScript"
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "users",
+      "databaseName": "users",
+      "displayName": "Users",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [],
+      "schemaList": [
+        {
+          "fieldName": "name",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Name",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f45adf16e8697f446542"
+          },
+          "min": 2,
+          "max": 100,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": true,
+          "lowercase": true,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Email",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f45adf16e8697f446543"
+          },
+          "min": 5,
+          "max": 150,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "status",
+          "type": "Boolean",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": false,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": false,
+          "editable": false,
+          "sortable": false,
+          "required": false,
+          "component": "p",
+          "label": "Status",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f45adf16e8697f446544"
+          },
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "default": true,
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "password",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": true,
+          "editable": false,
+          "sortable": false,
+          "required": true,
+          "component": "p",
+          "label": "Password",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f45adf16e8697f446545"
+          },
+          "min": 5,
+          "max": 300,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "remember_token",
+          "type": "Boolean",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": false,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": false,
+          "editable": false,
+          "sortable": false,
+          "required": false,
+          "component": "p",
+          "label": "Remeber Me",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f45adf16e8697f446546"
+          },
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email_verified_at",
+          "type": "DateTime",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": false,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": false,
+          "editable": false,
+          "sortable": false,
+          "required": false,
+          "component": "p",
+          "label": "Verified On",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f45adf16e8697f446547"
+          },
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": true,
+      "seeder": [],
+      "skip": true,
+      "downloadable": true,
+      "uploadable": false,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "customers",
+      "databaseName": "customers",
+      "displayName": "Customers",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "firstName",
+          "type": "ObjectId",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": false,
+          "required": false,
+          "component": "dropdown",
+          "label": "FirstName",
+          "faker": {
+            "module": "datatype",
+            "subModule": "number",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f57edf16e8697f4465aa"
+          },
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "refServiceName": "users",
+            "refDatabaseName": "users",
+            "relationshipType": "one-to-one",
+            "identifierFieldName": [
+              "password"
+            ]
+          }
+        },
+        {
+          "fieldName": "lastName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "LastName",
+          "faker": {
+            "module": "datatype",
+            "subModule": "number",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f57edf16e8697f4465ab"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Email",
+          "faker": {
+            "module": "datatype",
+            "subModule": "number",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f57edf16e8697f4465ac"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "phoneNumber",
+          "type": "ObjectId",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": false,
+          "required": false,
+          "component": "dropdown",
+          "label": "PhoneNumber",
+          "faker": {
+            "module": "",
+            "subModule": "",
+            "args": "",
+            "skip": false,
+            "_id": "6780fe4fdf16e8697f447148"
+          },
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "refServiceName": "userPhones",
+            "refDatabaseName": "userPhones",
+            "relationshipType": "one-to-one",
+            "identifierFieldName": [
+              "number"
+            ]
+          }
+        },
+        {
+          "fieldName": "address",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Address",
+          "faker": {
+            "module": "datatype",
+            "subModule": "number",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f57edf16e8697f4465ae"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "joinDate",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "JoinDate",
+          "faker": {
+            "module": "datatype",
+            "subModule": "number",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f57edf16e8697f4465af"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "loyaltyPoints",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "LoyaltyPoints",
+          "faker": {
+            "module": "datatype",
+            "subModule": "number",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f57edf16e8697f4465b0"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "firstName": "John",
+          "lastName": "Doe",
+          "email": "john.doe@example.com",
+          "phoneNumber": "123-456-7890",
+          "address": "123 Main St, Springfield",
+          "joinDate": 44576,
+          "loyaltyPoints": 150
+        },
+        {
+          "firstName": "Jane",
+          "lastName": "Smith",
+          "email": "jane.smith@example.com",
+          "phoneNumber": "987-654-3210",
+          "address": "456 Oak Ave, Springfield",
+          "joinDate": 44602,
+          "loyaltyPoints": 200
+        },
+        {
+          "firstName": "Jim",
+          "lastName": "Brown",
+          "email": "jim.brown@example.com",
+          "phoneNumber": "555-666-7777",
+          "address": "789 Pine Rd, Springfield",
+          "joinDate": 44632,
+          "loyaltyPoints": 180
+        },
+        {
+          "firstName": "Susan",
+          "lastName": "Clark",
+          "email": "susan.clark@example.com",
+          "phoneNumber": "444-555-6666",
+          "address": "321 Birch St, Springfield",
+          "joinDate": 44669,
+          "loyaltyPoints": 300
+        },
+        {
+          "firstName": "Michael",
+          "lastName": "Lee",
+          "email": "michael.lee@example.com",
+          "phoneNumber": "333-444-5555",
+          "address": "654 Cedar Blvd, Springfield",
+          "joinDate": 44703,
+          "loyaltyPoints": 220
+        },
+        {
+          "firstName": "Emily",
+          "lastName": "Davis",
+          "email": "emily.davis@example.com",
+          "phoneNumber": "222-333-4444",
+          "address": "987 Maple St, Springfield",
+          "joinDate": 44737,
+          "loyaltyPoints": 180
+        },
+        {
+          "firstName": "Robert",
+          "lastName": "Wilson",
+          "email": "robert.wilson@example.com",
+          "phoneNumber": "111-222-3333",
+          "address": "321 Elm St, Springfield",
+          "joinDate": 44756,
+          "loyaltyPoints": 160
+        },
+        {
+          "firstName": "Linda",
+          "lastName": "Thompson",
+          "email": "linda.thompson@example.com",
+          "phoneNumber": "999-888-7777",
+          "address": "123 Willow Ln, Springfield",
+          "joinDate": 44774,
+          "loyaltyPoints": 240
+        },
+        {
+          "firstName": "David",
+          "lastName": "White",
+          "email": "david.white@example.com",
+          "phoneNumber": "888-777-6666",
+          "address": "456 Spruce St, Springfield",
+          "joinDate": 44807,
+          "loyaltyPoints": 210
+        },
+        {
+          "firstName": "Karen",
+          "lastName": "Johnson",
+          "email": "karen.johnson@example.com",
+          "phoneNumber": "777-666-5555",
+          "address": "789 Fir St, Springfield",
+          "joinDate": 44839,
+          "loyaltyPoints": 2
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "vehicles",
+      "databaseName": "vehicles",
+      "displayName": "Vehicles",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "customerId",
+          "type": "ObjectId",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": false,
+          "required": false,
+          "component": "dropdown",
+          "label": "CustomerID",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f921df16e8697f4469eb"
+          },
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "refServiceName": "customers",
+            "refDatabaseName": "customers",
+            "relationshipType": "one-to-one",
+            "identifierFieldName": [
+              "firstName"
+            ]
+          }
+        },
+        {
+          "fieldName": "make",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Make",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f921df16e8697f4469ec"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "model",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Model",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f921df16e8697f4469ed"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "year",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Year",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f921df16e8697f4469ee"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "licensePlate",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "LicensePlate",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f921df16e8697f4469ef"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "vin",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "VIN",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f921df16e8697f4469f0"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "customerId": 1,
+          "make": "Toyota",
+          "model": "Camry",
+          "year": 2018,
+          "licensePlate": "ABC123",
+          "vin": "1HGCM82633A004352"
+        },
+        {
+          "customerId": 2,
+          "make": "Honda",
+          "model": "Accord",
+          "year": 2019,
+          "licensePlate": "XYZ789",
+          "vin": "1HGFA16586L000000"
+        },
+        {
+          "customerId": 3,
+          "make": "Ford",
+          "model": "F-150",
+          "year": 2020,
+          "licensePlate": "F150XLT",
+          "vin": "1FTRX18L9XKA40341"
+        },
+        {
+          "customerId": 4,
+          "make": "Chevrolet",
+          "model": "Malibu",
+          "year": 2017,
+          "licensePlate": "CHEV555",
+          "vin": "1G1ZT54845F000000"
+        },
+        {
+          "customerId": 5,
+          "make": "Nissan",
+          "model": "Altima",
+          "year": 2021,
+          "licensePlate": "NISSAN789",
+          "vin": "1N4AL11D75C000000"
+        },
+        {
+          "customerId": 6,
+          "make": "BMW",
+          "model": "328i",
+          "year": 2016,
+          "licensePlate": "BMW123",
+          "vin": "WBA3A5C52DF000000"
+        },
+        {
+          "customerId": 7,
+          "make": "Audi",
+          "model": "A4",
+          "year": 2018,
+          "licensePlate": "AUDI555",
+          "vin": "WAUEFAFL5GN000000"
+        },
+        {
+          "customerId": 8,
+          "make": "Mercedes",
+          "model": "C-Class",
+          "year": 2019,
+          "licensePlate": "MERC123",
+          "vin": "WDDGF8BB5BR000000"
+        },
+        {
+          "customerId": 9,
+          "make": "Tesla",
+          "model": "Model 3",
+          "year": 2020,
+          "licensePlate": "TESLA789",
+          "vin": "5YJ3E1EA7JF000000"
+        },
+        {
+          "customerId": 10,
+          "make": "Subaru",
+          "model": "Outback",
+          "year": 2021,
+          "licensePlate": "SUB123",
+          "vin": "4S4BSAAC0J3333333"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "loyaltyprograms",
+      "databaseName": "loyaltyprograms",
+      "displayName": "Loyaltyprograms",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "partId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "PartID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446558"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "partName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "PartName",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446559"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "description",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Description",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44655a"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "quantityInStock",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "QuantityInStock",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44655b"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "price",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Price",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44655c"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "supplierId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "SupplierID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44655d"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "partId": 1,
+          "partName": "Oil Filter",
+          "description": "Standard oil filter",
+          "quantityInStock": 50,
+          "price": 15,
+          "supplierId": 1
+        },
+        {
+          "partId": 2,
+          "partName": "Brake Pad",
+          "description": "High-quality brake pad set",
+          "quantityInStock": 30,
+          "price": 75,
+          "supplierId": 2
+        },
+        {
+          "partId": 3,
+          "partName": "Battery",
+          "description": "Car battery, 12V",
+          "quantityInStock": 20,
+          "price": 120,
+          "supplierId": 3
+        },
+        {
+          "partId": 4,
+          "partName": "Air Filter",
+          "description": "Engine air filter",
+          "quantityInStock": 40,
+          "price": 20,
+          "supplierId": 1
+        },
+        {
+          "partId": 5,
+          "partName": "Spark Plug",
+          "description": "High-performance spark plug",
+          "quantityInStock": 100,
+          "price": 10,
+          "supplierId": 4
+        },
+        {
+          "partId": 6,
+          "partName": "Windshield Wiper",
+          "description": "Wiper blade, 24-inch",
+          "quantityInStock": 25,
+          "price": 15,
+          "supplierId": 5
+        },
+        {
+          "partId": 7,
+          "partName": "Tire",
+          "description": "All-season tire, 16-inch",
+          "quantityInStock": 10,
+          "price": 100,
+          "supplierId": 6
+        },
+        {
+          "partId": 8,
+          "partName": "Brake Fluid",
+          "description": "DOT 4 brake fluid",
+          "quantityInStock": 60,
+          "price": 8,
+          "supplierId": 2
+        },
+        {
+          "partId": 9,
+          "partName": "Transmission Fluid",
+          "description": "Synthetic transmission fluid",
+          "quantityInStock": 30,
+          "price": 25,
+          "supplierId": 3
+        },
+        {
+          "partId": 10,
+          "partName": "Coolant",
+          "description": "Engine coolant, 1 gallon",
+          "quantityInStock": 35,
+          "price": 18,
+          "supplierId": 4
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "invoices",
+      "databaseName": "invoices",
+      "displayName": "Invoices",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "customerId",
+          "type": "ObjectId",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": false,
+          "required": false,
+          "component": "dropdown",
+          "label": "CustomerID",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f95bdf16e8697f446a5d"
+          },
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "refServiceName": "customers",
+            "refDatabaseName": "customers",
+            "relationshipType": "one-to-one",
+            "identifierFieldName": [
+              "firstName"
+            ]
+          }
+        },
+        {
+          "fieldName": "vehicleId",
+          "type": "ObjectId",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": false,
+          "required": false,
+          "component": "dropdown",
+          "label": "VehicleID",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f95bdf16e8697f446a5e"
+          },
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "refServiceName": "vehicles",
+            "refDatabaseName": "vehicles",
+            "relationshipType": "one-to-one",
+            "identifierFieldName": [
+              "make"
+            ]
+          }
+        },
+        {
+          "fieldName": "serviceDate",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "ServiceDate",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f95bdf16e8697f446a5f"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "totalAmount",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "TotalAmount",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f95bdf16e8697f446a60"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "paymentStatus",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "PaymentStatus",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f95bdf16e8697f446a61"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "paymentMethod",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "PaymentMethod",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f95bdf16e8697f446a62"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "notes",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Notes",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780f95bdf16e8697f446a63"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "customerId": 1,
+          "vehicleId": 1,
+          "serviceDate": 44581,
+          "totalAmount": 150,
+          "paymentStatus": "Paid",
+          "paymentMethod": "Credit Card",
+          "notes": "Regular maintenance"
+        },
+        {
+          "customerId": 2,
+          "vehicleId": 2,
+          "serviceDate": 44607,
+          "totalAmount": 200,
+          "paymentStatus": "Paid",
+          "paymentMethod": "Cash",
+          "notes": "Brake service"
+        },
+        {
+          "customerId": 3,
+          "vehicleId": 3,
+          "serviceDate": 44638,
+          "totalAmount": 250,
+          "paymentStatus": "Unpaid",
+          "paymentMethod": "Credit Card",
+          "notes": "Oil change + tire rotation"
+        },
+        {
+          "customerId": 4,
+          "vehicleId": 4,
+          "serviceDate": 44676,
+          "totalAmount": 300,
+          "paymentStatus": "Paid",
+          "paymentMethod": "Credit Card",
+          "notes": "Full service"
+        },
+        {
+          "customerId": 5,
+          "vehicleId": 5,
+          "serviceDate": 44711,
+          "totalAmount": 180,
+          "paymentStatus": "Paid",
+          "paymentMethod": "Cash",
+          "notes": "Oil change"
+        },
+        {
+          "customerId": 6,
+          "vehicleId": 6,
+          "serviceDate": 44722,
+          "totalAmount": 220,
+          "paymentStatus": "Unpaid",
+          "paymentMethod": "Credit Card",
+          "notes": "Battery replacement"
+        },
+        {
+          "customerId": 7,
+          "vehicleId": 7,
+          "serviceDate": 44747,
+          "totalAmount": 100,
+          "paymentStatus": "Paid",
+          "paymentMethod": "Credit Card",
+          "notes": "Tire rotation"
+        },
+        {
+          "customerId": 8,
+          "vehicleId": 8,
+          "serviceDate": 44785,
+          "totalAmount": 280,
+          "paymentStatus": "Paid",
+          "paymentMethod": "Credit Card",
+          "notes": "Engine check"
+        },
+        {
+          "customerId": 9,
+          "vehicleId": 9,
+          "serviceDate": 44824,
+          "totalAmount": 320,
+          "paymentStatus": "Paid",
+          "paymentMethod": "Cash",
+          "notes": "Transmission service"
+        },
+        {
+          "customerId": 10,
+          "vehicleId": 10,
+          "serviceDate": 44859,
+          "totalAmount": 150,
+          "paymentStatus": "Paid",
+          "paymentMethod": "Credit Card",
+          "notes": "Regular maintenance"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "services",
+      "databaseName": "services",
+      "displayName": "Services",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "serviceName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "ServiceName",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446567"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "description",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Description",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446568"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "price",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Price",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446569"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "duration",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Duration",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44656a"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "serviceName": "Oil Change",
+          "description": "Standard oil change",
+          "price": 50,
+          "duration": 0.020833333333333332
+        },
+        {
+          "serviceName": "Tire Rotation",
+          "description": "Rotate all tires",
+          "price": 30,
+          "duration": 0.03125
+        },
+        {
+          "serviceName": "Brake Inspection",
+          "description": "Inspect and replace brakes if needed",
+          "price": 80,
+          "duration": 0.041666666666666664
+        },
+        {
+          "serviceName": "Battery Replacement",
+          "description": "Replace car battery",
+          "price": 100,
+          "duration": 0.03125
+        },
+        {
+          "serviceName": "Engine Check",
+          "description": "Full engine diagnostic",
+          "price": 150,
+          "duration": 0.08333333333333333
+        },
+        {
+          "serviceName": "Transmission Service",
+          "description": "Inspect and service transmission",
+          "price": 200,
+          "duration": 0.10416666666666667
+        },
+        {
+          "serviceName": "Full Service",
+          "description": "Comprehensive vehicle service",
+          "price": 300,
+          "duration": 0.125
+        },
+        {
+          "serviceName": "AC Service",
+          "description": "Check and recharge AC system",
+          "price": 120,
+          "duration": 0.0625
+        },
+        {
+          "serviceName": "Detailing",
+          "description": "Full vehicle detailing service",
+          "price": 250,
+          "duration": 0.16666666666666666
+        },
+        {
+          "serviceName": "Alignment",
+          "description": "Wheel alignment service",
+          "price": 75,
+          "duration": 0.041666666666666664
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "servicerecords",
+      "databaseName": "servicerecords",
+      "displayName": "Service Records",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "invoiceId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "InvoiceID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44656c"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "serviceId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "ServiceID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44656d"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "vehicleId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "VehicleID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44656e"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "technicianId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "TechnicianID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44656f"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "serviceDate",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "ServiceDate",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446570"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "invoiceId": 1,
+          "serviceId": 1,
+          "vehicleId": 1,
+          "technicianId": 1,
+          "serviceDate": 44581
+        },
+        {
+          "invoiceId": 2,
+          "serviceId": 3,
+          "vehicleId": 2,
+          "technicianId": 2,
+          "serviceDate": 44607
+        },
+        {
+          "invoiceId": 3,
+          "serviceId": 2,
+          "vehicleId": 3,
+          "technicianId": 3,
+          "serviceDate": 44638
+        },
+        {
+          "invoiceId": 4,
+          "serviceId": 7,
+          "vehicleId": 4,
+          "technicianId": 4,
+          "serviceDate": 44676
+        },
+        {
+          "invoiceId": 5,
+          "serviceId": 1,
+          "vehicleId": 5,
+          "technicianId": 5,
+          "serviceDate": 44711
+        },
+        {
+          "invoiceId": 6,
+          "serviceId": 4,
+          "vehicleId": 6,
+          "technicianId": 6,
+          "serviceDate": 44722
+        },
+        {
+          "invoiceId": 7,
+          "serviceId": 2,
+          "vehicleId": 7,
+          "technicianId": 7,
+          "serviceDate": 44747
+        },
+        {
+          "invoiceId": 8,
+          "serviceId": 5,
+          "vehicleId": 8,
+          "technicianId": 8,
+          "serviceDate": 44785
+        },
+        {
+          "invoiceId": 9,
+          "serviceId": 6,
+          "vehicleId": 9,
+          "technicianId": 9,
+          "serviceDate": 44824
+        },
+        {
+          "invoiceId": 10,
+          "serviceId": 1,
+          "vehicleId": 10,
+          "technicianId": 10,
+          "serviceDate": 44859
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "maintenanceschedules",
+      "databaseName": "maintenanceschedules",
+      "displayName": "Maintenance schedule",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "vehicleId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "VehicleID",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780fac6df16e8697f446d7b"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "serviceId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "ServiceID",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780fac6df16e8697f446d7c"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "nextServiceDate",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "NextServiceDate",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780fac6df16e8697f446d7d"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "notes",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Notes",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "6780fac6df16e8697f446d7e"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "vehicleId": 1,
+          "serviceId": 1,
+          "nextServiceDate": 44946,
+          "notes": "Oil change scheduled"
+        },
+        {
+          "vehicleId": 2,
+          "serviceId": 3,
+          "nextServiceDate": 44972,
+          "notes": "Brake inspection due"
+        },
+        {
+          "vehicleId": 3,
+          "serviceId": 2,
+          "nextServiceDate": 45003,
+          "notes": "Tire rotation scheduled"
+        },
+        {
+          "vehicleId": 4,
+          "serviceId": 7,
+          "nextServiceDate": 45041,
+          "notes": "Full service due"
+        },
+        {
+          "vehicleId": 5,
+          "serviceId": 1,
+          "nextServiceDate": 45076,
+          "notes": "Oil change scheduled"
+        },
+        {
+          "vehicleId": 6,
+          "serviceId": 4,
+          "nextServiceDate": 45087,
+          "notes": "Battery replacement due"
+        },
+        {
+          "vehicleId": 7,
+          "serviceId": 2,
+          "nextServiceDate": 45112,
+          "notes": "Tire rotation scheduled"
+        },
+        {
+          "vehicleId": 8,
+          "serviceId": 5,
+          "nextServiceDate": 45150,
+          "notes": "Engine check due"
+        },
+        {
+          "vehicleId": 9,
+          "serviceId": 6,
+          "nextServiceDate": 45189,
+          "notes": "Transmission service due"
+        },
+        {
+          "vehicleId": 10,
+          "serviceId": 1,
+          "nextServiceDate": 45224,
+          "notes": "Oil change scheduled"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "oilchangerecords",
+      "databaseName": "oilchangerecords",
+      "displayName": "Oil change records",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "vehicleId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "VehicleID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446577"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "serviceRecordId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "ServiceRecordID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446578"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "oilType",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "OilType",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446579"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "mileage",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Mileage",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44657a"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "technicianId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "TechnicianID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44657b"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "dateOfChange",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "DateOfChange",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44657c"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "vehicleId": 1,
+          "serviceRecordId": 1,
+          "oilType": "Synthetic",
+          "mileage": 15000,
+          "technicianId": 1,
+          "dateOfChange": 44581
+        },
+        {
+          "vehicleId": 2,
+          "serviceRecordId": 5,
+          "oilType": "Conventional",
+          "mileage": 30000,
+          "technicianId": 2,
+          "dateOfChange": 44711
+        },
+        {
+          "vehicleId": 3,
+          "serviceRecordId": 3,
+          "oilType": "Synthetic",
+          "mileage": 45000,
+          "technicianId": 3,
+          "dateOfChange": 44638
+        },
+        {
+          "vehicleId": 4,
+          "serviceRecordId": 10,
+          "oilType": "Conventional",
+          "mileage": 60000,
+          "technicianId": 4,
+          "dateOfChange": 44859
+        },
+        {
+          "vehicleId": 5,
+          "serviceRecordId": 5,
+          "oilType": "Synthetic",
+          "mileage": 75000,
+          "technicianId": 5,
+          "dateOfChange": 44711
+        },
+        {
+          "vehicleId": 6,
+          "serviceRecordId": 6,
+          "oilType": "Synthetic",
+          "mileage": 90000,
+          "technicianId": 6,
+          "dateOfChange": 44722
+        },
+        {
+          "vehicleId": 7,
+          "serviceRecordId": 7,
+          "oilType": "Synthetic",
+          "mileage": 105000,
+          "technicianId": 7,
+          "dateOfChange": 44747
+        },
+        {
+          "vehicleId": 8,
+          "serviceRecordId": 8,
+          "oilType": "Conventional",
+          "mileage": 120000,
+          "technicianId": 8,
+          "dateOfChange": 44785
+        },
+        {
+          "vehicleId": 9,
+          "serviceRecordId": 9,
+          "oilType": "Synthetic",
+          "mileage": 135000,
+          "technicianId": 9,
+          "dateOfChange": 44824
+        },
+        {
+          "vehicleId": 10,
+          "serviceRecordId": 10,
+          "oilType": "Synthetic",
+          "mileage": 150000,
+          "technicianId": 10,
+          "dateOfChange": 44859
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "technicians",
+      "databaseName": "technicians",
+      "displayName": "Technicians",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "firstName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "FirstName",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44657e"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "lastName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "LastName",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44657f"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Email",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446580"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "phoneNumber",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "PhoneNumber",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446581"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "specialization",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Specialization",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446582"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "firstName": "Mark",
+          "lastName": "Jones",
+          "email": "mark.jones@example.com",
+          "phoneNumber": "123-111-2222",
+          "specialization": "Oil Change"
+        },
+        {
+          "firstName": "Sarah",
+          "lastName": "Adams",
+          "email": "sarah.adams@example.com",
+          "phoneNumber": "456-222-3333",
+          "specialization": "Brake Service"
+        },
+        {
+          "firstName": "James",
+          "lastName": "Carter",
+          "email": "james.carter@example.com",
+          "phoneNumber": "789-333-4444",
+          "specialization": "Tire Rotation"
+        },
+        {
+          "firstName": "Lisa",
+          "lastName": "Edwards",
+          "email": "lisa.edwards@example.com",
+          "phoneNumber": "123-444-5555",
+          "specialization": "Engine Check"
+        },
+        {
+          "firstName": "Kevin",
+          "lastName": "Garcia",
+          "email": "kevin.garcia@example.com",
+          "phoneNumber": "456-555-6666",
+          "specialization": "Battery Replacement"
+        },
+        {
+          "firstName": "Laura",
+          "lastName": "Hill",
+          "email": "laura.hill@example.com",
+          "phoneNumber": "789-666-7777",
+          "specialization": "Full Service"
+        },
+        {
+          "firstName": "Daniel",
+          "lastName": "Lee",
+          "email": "daniel.lee@example.com",
+          "phoneNumber": "123-777-8888",
+          "specialization": "Tire Rotation"
+        },
+        {
+          "firstName": "Mary",
+          "lastName": "Martinez",
+          "email": "mary.martinez@example.com",
+          "phoneNumber": "456-888-9999",
+          "specialization": "Engine Check"
+        },
+        {
+          "firstName": "Richard",
+          "lastName": "Nelson",
+          "email": "richard.nelson@example.com",
+          "phoneNumber": "789-999-0000",
+          "specialization": "Transmission Service"
+        },
+        {
+          "firstName": "Jennifer",
+          "lastName": "Parker",
+          "email": "jennifer.parker@example.com",
+          "phoneNumber": "123-000-1111",
+          "specialization": "Oil Change"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "partsinventory",
+      "databaseName": "partsinventory",
+      "displayName": "Parts Inventory",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "partName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "PartName",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446584"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "description",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Description",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446585"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "quantityInStock",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "QuantityInStock",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446586"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "price",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Price",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446587"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "supplierId",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "SupplierID",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446588"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "partName": "Oil Filter",
+          "description": "Standard oil filter",
+          "quantityInStock": 50,
+          "price": 15,
+          "supplierId": 1
+        },
+        {
+          "partName": "Brake Pad",
+          "description": "High-quality brake pad set",
+          "quantityInStock": 30,
+          "price": 75,
+          "supplierId": 2
+        },
+        {
+          "partName": "Battery",
+          "description": "Car battery, 12V",
+          "quantityInStock": 20,
+          "price": 120,
+          "supplierId": 3
+        },
+        {
+          "partName": "Air Filter",
+          "description": "Engine air filter",
+          "quantityInStock": 40,
+          "price": 20,
+          "supplierId": 1
+        },
+        {
+          "partName": "Spark Plug",
+          "description": "High-performance spark plug",
+          "quantityInStock": 100,
+          "price": 10,
+          "supplierId": 4
+        },
+        {
+          "partName": "Windshield Wiper",
+          "description": "Wiper blade, 24-inch",
+          "quantityInStock": 25,
+          "price": 15,
+          "supplierId": 5
+        },
+        {
+          "partName": "Tire",
+          "description": "All-season tire, 16-inch",
+          "quantityInStock": 10,
+          "price": 100,
+          "supplierId": 6
+        },
+        {
+          "partName": "Brake Fluid",
+          "description": "DOT 4 brake fluid",
+          "quantityInStock": 60,
+          "price": 8,
+          "supplierId": 2
+        },
+        {
+          "partName": "Transmission Fluid",
+          "description": "Synthetic transmission fluid",
+          "quantityInStock": 30,
+          "price": 25,
+          "supplierId": 3
+        },
+        {
+          "partName": "Coolant",
+          "description": "Engine coolant, 1 gallon",
+          "quantityInStock": 35,
+          "price": 18,
+          "supplierId": 4
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "suppliers",
+      "databaseName": "suppliers",
+      "displayName": "Suppliers",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "supplierName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "SupplierName",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44658a"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "contactPerson",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "ContactPerson",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44658b"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "phoneNumber",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "PhoneNumber",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44658c"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Email",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44658d"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "address",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Address",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f44658e"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "supplierName": "Auto Parts Co.",
+          "contactPerson": "Tom Benson",
+          "phoneNumber": "123-111-4444",
+          "email": "tom.benson@autoparts.com",
+          "address": "123 Auto St, Springfield"
+        },
+        {
+          "supplierName": "Brake Masters",
+          "contactPerson": "Nancy Wilson",
+          "phoneNumber": "456-222-5555",
+          "email": "nancy.wilson@brakemasters.com",
+          "address": "456 Brake Rd, Springfield"
+        },
+        {
+          "supplierName": "Battery Solutions",
+          "contactPerson": "Jack Johnson",
+          "phoneNumber": "789-333-6666",
+          "email": "jack.johnson@battery.com",
+          "address": "789 Battery Blvd, Springfield"
+        },
+        {
+          "supplierName": "EngineWorks",
+          "contactPerson": "Karen Taylor",
+          "phoneNumber": "123-444-7777",
+          "email": "karen.taylor@engineworks.com",
+          "address": "321 Engine Ln, Springfield"
+        },
+        {
+          "supplierName": "Wiper World",
+          "contactPerson": "Alice Harris",
+          "phoneNumber": "456-555-8888",
+          "email": "alice.harris@wiperworld.com",
+          "address": "654 Wiper Way, Springfield"
+        },
+        {
+          "supplierName": "Tire Plus",
+          "contactPerson": "Michael King",
+          "phoneNumber": "789-666-9999",
+          "email": "michael.king@tireplus.com",
+          "address": "987 Tire St, Springfield"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "paymentmethods",
+      "databaseName": "paymentmethods",
+      "displayName": "Payment methods",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "methodName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "MethodName",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446590"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "description",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Description",
+          "faker": {
+            "skip": false,
+            "_id": "6780f45adf16e8697f446591"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "methodName": "Credit Card",
+          "description": "Visa, MasterCard, AMEX"
+        },
+        {
+          "methodName": "Cash",
+          "description": "Physical cash payments"
+        },
+        {
+          "methodName": "PayPal",
+          "description": "Online PayPal payments"
+        },
+        {
+          "methodName": "Bank Transfer",
+          "description": "Direct bank transfers"
+        },
+        {
+          "methodName": "Check",
+          "description": "Personal or business checks"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    }
+  ]
+}
